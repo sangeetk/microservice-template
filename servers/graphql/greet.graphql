@@ -1,0 +1,11 @@
+input GreetRequest {
+  name: String!
+}
+
+type GreetResponse {
+  message: String!
+}
+
+type Query {
+  greet(req: GreetRequest!): GreetResponse!
+}
