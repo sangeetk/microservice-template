@@ -188,7 +188,7 @@ func (ec *executionContext) field_Query_greet_args(ctx context.Context, rawArgs 
 	var arg0 model.GreetRequest
 	if tmp, ok := rawArgs["req"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("req"))
-		arg0, err = ec.unmarshalNGreetRequest2githubᚗcomᚋsangeetkᚋgoᚑmicroᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetRequest(ctx, tmp)
+		arg0, err = ec.unmarshalNGreetRequest2githubᚗcomᚋsangeetkᚋmicroserviceᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetRequest(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -309,7 +309,7 @@ func (ec *executionContext) _Query_greet(ctx context.Context, field graphql.Coll
 	}
 	res := resTmp.(*model.GreetResponse)
 	fc.Result = res
-	return ec.marshalNGreetResponse2ᚖgithubᚗcomᚋsangeetkᚋgoᚑmicroᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetResponse(ctx, field.Selections, res)
+	return ec.marshalNGreetResponse2ᚖgithubᚗcomᚋsangeetkᚋmicroserviceᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetResponse(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) _Query___type(ctx context.Context, field graphql.CollectedField) (ret graphql.Marshaler) {
@@ -1829,16 +1829,16 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) unmarshalNGreetRequest2githubᚗcomᚋsangeetkᚋgoᚑmicroᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetRequest(ctx context.Context, v interface{}) (model.GreetRequest, error) {
+func (ec *executionContext) unmarshalNGreetRequest2githubᚗcomᚋsangeetkᚋmicroserviceᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetRequest(ctx context.Context, v interface{}) (model.GreetRequest, error) {
 	res, err := ec.unmarshalInputGreetRequest(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNGreetResponse2githubᚗcomᚋsangeetkᚋgoᚑmicroᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetResponse(ctx context.Context, sel ast.SelectionSet, v model.GreetResponse) graphql.Marshaler {
+func (ec *executionContext) marshalNGreetResponse2githubᚗcomᚋsangeetkᚋmicroserviceᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetResponse(ctx context.Context, sel ast.SelectionSet, v model.GreetResponse) graphql.Marshaler {
 	return ec._GreetResponse(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNGreetResponse2ᚖgithubᚗcomᚋsangeetkᚋgoᚑmicroᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetResponse(ctx context.Context, sel ast.SelectionSet, v *model.GreetResponse) graphql.Marshaler {
+func (ec *executionContext) marshalNGreetResponse2ᚖgithubᚗcomᚋsangeetkᚋmicroserviceᚑtemplateᚋserversᚋgraphqlᚋmodelᚐGreetResponse(ctx context.Context, sel ast.SelectionSet, v *model.GreetResponse) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "must not be null")

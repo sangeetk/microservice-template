@@ -1,8 +1,11 @@
 all:
 	go build
 
-graphql:
+gqlgen:
 	go run github.com/99designs/gqlgen generate
 
-grpc:
+protoc:
 	protoc --go_out=plugins=grpc:servers/grpc servers/grpc/greet.proto
+
+clean:
+	go clean

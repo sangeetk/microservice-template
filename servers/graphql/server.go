@@ -10,7 +10,10 @@ import (
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/sangeetk/microservice-template/config"
 	"github.com/sangeetk/microservice-template/servers/graphql/generated"
+	"github.com/sangeetk/microservice-template/service"
 )
+
+var svc service.Service
 
 func Server(ctx context.Context, c config.AppConfig) {
 

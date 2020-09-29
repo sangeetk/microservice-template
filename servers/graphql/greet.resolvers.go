@@ -9,10 +9,7 @@ import (
 	"github.com/sangeetk/microservice-template/data"
 	"github.com/sangeetk/microservice-template/servers/graphql/generated"
 	"github.com/sangeetk/microservice-template/servers/graphql/model"
-	"github.com/sangeetk/microservice-template/service"
 )
-
-var svc service.Service
 
 func (r *queryResolver) Greet(ctx context.Context, req model.GreetRequest) (*model.GreetResponse, error) {
 	var request = data.GreetRequest{Name: req.Name}
